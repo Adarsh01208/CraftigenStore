@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+body{
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg_login {
+  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
+  background-size: cover;
+  position:absolute;
+
+  /* background: #6a11cb;
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)) */
+}
+.footer_img{
+
+  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/FOOTER.png?v=73496530064064484761618490941');
+  height: 215px;
+  width: 100%;
+  background-size: cover;
+  
+  
+}
+.footer_decoration a  {
+  text-decoration: none;
+  color: #2d2d2d;
+  line-height: 35px;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: transparent;
+}
+.footer_decoration p{
+  font-size: 12px;
+}
+.fb_icon{
+  width: 30px;
+    height: 30px;
+    padding: 7px
+}
+.loginbg , .signupbg{
+  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
+  background-size: cover;
+}
+.nav-link{
+  color: inherit;
+  font-size: 13px;
+  font-weight: inherit;
+  letter-spacing: .6px;
+  z-index: 50;
+  font-size: 13px;
+  font-family: Poppins,sans-serif;
+  font-weight: 500;
+  color: #191919;
+}
+.homebg{
+  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
+  background-size: cover;
+
+}
+.homeimg1{
+  background-image: url('https://thebombaystore.com/cdn/shop/files/01_d45e658a-1a9c-415f-842c-2eecc19443ee.jpg?v=1664782679');
+  height: 400px;
+  width: 100%;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*  */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homeimg2{
+  background-image: url('https://thebombaystore.com/cdn/shop/files/03_a4199c5c-6dc8-4b95-a4ad-f2f79feede40.jpg?v=1664782720');
+  height: 400px;
+  width: 100%;
+  background-size: cover;
 }
-
-.App-link {
-  color: #61dafb;
+.homeimg2ds {
+     margin-top: 200px;
+     margin-left: 30px;
+     color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardbg{
+  background-color: rgb(255, 250, 242);
 }
