@@ -1,26 +1,28 @@
-body{
+body {
   position: relative;
 }
 
 .bg_login {
   background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
   background-size: cover;
-  position:absolute;
+  position: absolute;
 
   /* background: #6a11cb;
   background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
   background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)) */
 }
-.footer_img{
+
+.footer_img {
 
   background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/FOOTER.png?v=73496530064064484761618490941');
   height: 215px;
   width: 100%;
   background-size: cover;
-  
-  
+
+
 }
-.footer_decoration a  {
+
+.footer_decoration a {
   text-decoration: none;
   color: #2d2d2d;
   line-height: 35px;
@@ -28,36 +30,46 @@ body{
   position: relative;
   background-color: transparent;
 }
-.footer_decoration p{
+
+.footer_decoration p {
   font-size: 12px;
 }
-.fb_icon{
+
+.fb_icon {
   width: 30px;
-    height: 30px;
-    padding: 7px
+  height: 30px;
+  padding: 7px
 }
-.loginbg , .signupbg{
+
+.loginbg,
+.signupbg {
   background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
   background-size: cover;
 }
-.nav-link{
+
+.nav-link {
   color: inherit;
   font-size: 13px;
   font-weight: inherit;
   letter-spacing: .6px;
   z-index: 50;
   font-size: 13px;
-  font-family: Poppins,sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 500;
   color: #191919;
 }
-.homebg{
+
+.homebg {
   background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
   background-size: cover;
 
 }
-.homeimg1{
-  background-image: url('https://thebombaystore.com/cdn/shop/files/01_d45e658a-1a9c-415f-842c-2eecc19443ee.jpg?v=1664782679');
+
+.homeimg1 {
+  background-image: linear-gradient(to bottom,
+      rgba(125, 125, 106, 0.5),
+      rgba(90, 90, 92, 0.5)),
+    url('https://thebombaystore.com/cdn/shop/files/01_d45e658a-1a9c-415f-842c-2eecc19443ee.jpg?v=1664782679');
   height: 400px;
   width: 100%;
   background-size: cover;
@@ -65,17 +77,28 @@ body{
 
 /*  */
 
-.homeimg2{
-  background-image: url('https://thebombaystore.com/cdn/shop/files/03_a4199c5c-6dc8-4b95-a4ad-f2f79feede40.jpg?v=1664782720');
+.homeimg2 {
+  background-image: linear-gradient(to bottom,
+      rgba(125, 125, 106, 0.5),
+      rgba(90, 90, 92, 0.5)), url('https://thebombaystore.com/cdn/shop/files/03_a4199c5c-6dc8-4b95-a4ad-f2f79feede40.jpg?v=1664782720');
   height: 400px;
   width: 100%;
   background-size: cover;
 }
+
 .homeimg2ds {
-     margin-top: 200px;
-     margin-left: 30px;
-     color: white;
+  margin-top: 200px;
+  margin-left: 30px;
+  color: white;
 }
-.cardbg{
+
+.cardbg {
   background-color: rgb(255, 250, 242);
+}
+
+.homeimg3ds {
+
+  margin-right: 50rem;
+  color: white;
+
 }
