@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import laptopData from './dummyData';
+import laptopData from './DummyData';
 import Slide from 'react-reveal/Slide';
 
 const Browse = () => {
