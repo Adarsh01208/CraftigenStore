@@ -21,22 +21,18 @@ function App() {
       <Toaster position='top-center' />
       <BrowserRouter>
         <UserProvider>
-          {/* <Link to="/home">Home Page</Link>
-        <Link to="/login">Login Page</Link>
-        <Link to="/signup"> Signup Page</Link>
-        <Link to="/signin">Signin Page</Link> */}
           <Navbar />
           <Routes>
             <Route path='/' element={<Navigate to="/home" />} />
             <Route path='home' element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
-            <Route path='addproduct' element={<AddProduct />} />
-            <Route path='browse' element={<Browse  />} />
-            <Route path='contactus' element={<ContactUs />} />
-            <Route path='manageuser' element={ <UserAuth> <ManageUser /></UserAuth> } />
-            <Route path='updateuser/:id' element={<UpdateUser />} />
-            <Route path='productlist' element={< ListProduct />} />
+            <Route path='addproduct' element={<UserAuth> <AddProduct /> </UserAuth>} />
+            <Route path='browse' element={<UserAuth>  <Browse /></UserAuth>} />
+            <Route path='contactus' element={<UserAuth> <ContactUs /> </UserAuth>} />
+            <Route path='manageuser' element={<UserAuth> <ManageUser /></UserAuth>} />
+            <Route path='updateuser/:id' element={<UserAuth><UpdateUser /> </UserAuth>} />
+            <Route path='productlist' element={<UserAuth><ListProduct /> </UserAuth>} />
           </Routes>
           <Footer />
         </UserProvider>
