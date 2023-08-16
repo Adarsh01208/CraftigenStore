@@ -31,14 +31,14 @@ const Browse = () => {
             return laptop.title.toLowerCase().includes(value.toLowerCase())
         })
         );
-
     };
+
     return (
         <div className='loginbg'>
             <header className='bg-body-tertiory'>
                 <div className='container py-5'>
                     <Slide left>
-                        <p className='display-2 text-center mb-5 fw-bold'>Festive Favourites</p>
+                        <p className='display-2 text-center mb-5 fw-bold'>All Collections</p>
                     </Slide>
                     <Slide right>
                         <input type="text" placeholder='Search Items' className='form-control w-75 m-auto' onChange={filterLaptop} />

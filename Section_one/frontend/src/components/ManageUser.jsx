@@ -45,23 +45,20 @@ const ManageUser = () => {
                     <th>Email</th>
                     <th>Password</th>
                     <th>Image</th>
-                   <th></th>
-                   <th></th>
-                   
-
-
-
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 {
                     userList.map((user) => (
-                        <tr>
+                        <tr className='p-0' >
                             <td>{user._id}</td>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.password}</td>
                             <td>{user.avatar}</td>
+                            <td className='text-center'> <img width={50} className="img-fluid  rounded-5" src={"http://localhost:5000/" + user.avatar} alt="" /></td>
                             <td className='text-center'><button className='btn btn-danger' onClick={() => { deleteUser(user._id) }} >Delete User</button> </td>
                             <td className='text-center'><button className='btn btn-primary' onClick={() => { navigate('/updateuser/' + user._id) }} >Update User</button> </td>
                         </tr>
@@ -70,11 +67,9 @@ const ManageUser = () => {
             </tbody>
         </table>
     };
-
     return (
         <div>
             <h1 className='text-center m-5'>Manage User Data</h1>
-           
             <div className='container'>
                 {displayUsers()}
             </div>
@@ -82,4 +77,4 @@ const ManageUser = () => {
     )
 }
 
-export default ManageUser
+export default ManageUser;

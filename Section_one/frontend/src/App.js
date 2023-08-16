@@ -12,8 +12,8 @@ import ManageUser from './components/ManageUser';
 import ContactUs from './components/ContactUs';
 import UpdateUser from './components/UpdateUser';
 import { Toaster } from 'react-hot-toast';
-
-
+import ListProduct from './components/ListProduct';
+import UserAuth from './UserAuth';
 
 function App() {
   return (
@@ -32,15 +32,15 @@ function App() {
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
             <Route path='addproduct' element={<AddProduct />} />
-            <Route path='browse' element={<Browse />} />
+            <Route path='browse' element={<Browse  />} />
             <Route path='contactus' element={<ContactUs />} />
-            <Route path='manageuser' element={<ManageUser />} />
+            <Route path='manageuser' element={ <UserAuth> <ManageUser /></UserAuth> } />
             <Route path='updateuser/:id' element={<UpdateUser />} />
+            <Route path='productlist' element={< ListProduct />} />
           </Routes>
           <Footer />
         </UserProvider>
       </BrowserRouter>
-     
     </div>
   );
 }
