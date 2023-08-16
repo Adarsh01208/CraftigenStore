@@ -1,4 +1,4 @@
-# MERN-HANDICRAFT-WEBSITE
+# MERN-CRAFTIGEN-WEBSITE
 ## (My First Real Project) assigned  during Internship
 
 A Handicraft Web Application made using MERN Stack (MongoDB, Express js, React js, Node js)
@@ -99,16 +99,16 @@ npm -v
 
 Follow the following steps to get development environment running.
 
-* Clone _'MiniProject.git'_ repository from GitHub
+* Clone _'CraftigenStore.git'_ repository from GitHub
 
   ```bash
-  git clone https://github.com/Adarsh01208/MiniProject.git
+  git clone https://github.com/Adarsh01208/CraftigenStore.git
   ```
 
    _OR USING SSH_
 
   ```bash
-  git clone git@github.com:Adarsh01208/MiniProject.git
+  git clone git@github.com:Adarsh01208/CraftigenStore.git
   ```
 
 * Install node modules
