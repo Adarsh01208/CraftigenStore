@@ -15,7 +15,7 @@ The Handicraft Website is composed of the following Features:
 
 * Has a profile page, which will display all information about the signed in user.
 
-* Also habe feature where User Can Add their product for selling can also add prize img etc
+* Also habe feature where User Can Add their product for selling nd also add price,img etc.
 
 ### Back-End
 
@@ -26,30 +26,40 @@ The Handicraft Website is composed of the following Features:
 * Uses passport js for authenticating user and token based system.
 
 * Uses passport js for hashing the password before sending the data to the cloud.
-
-This project also demonstrates:
-
-* a typcial React project layout structure
+  
+* Uses CRUD Operation where user can also update their profile.
+  
 
 **Screenshots:**
-Landing Page:
+### Landing Page:
 
 ![](Previews/Home1.png)
 
-Signing In Page:
+### Home Page:
 
-![](documentationResources/signin.png)
+![](Previews/Home2.png)
 
-Bus Selection Page:
+### LoginIn Page:
 
-![](documentationResources/bus-page.png)
+![](Previews/Login.png)
 
-Seat Selection Page:
 
-![](documentationResources/seatSelection.gif)
+### Signup Page:
 
-Payment & Confirmation Page:
-![](documentationResources/payment.gif)
+![](Previews/Signup.png)
+
+### Add Product Page:
+
+![](Previews/addproducts.png)
+
+### Shopping Page:
+
+![](Previews/buyitems1.png)
+
+
+
+Browsing Items For Buying:
+![](Previews/buyitems.png)
 ---
 
 ## Developed With
@@ -59,7 +69,7 @@ Payment & Confirmation Page:
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
 * [Webpack](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
-* [Bootstrap 4](https://getbootstrap.com/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS
+* [Bootstrap 5](https://getbootstrap.com/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS
 * [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 * [Express js](http://expressjs.com/) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 * [MongoDB atlas](https://www.mongodb.com/cloud/atlas) - MongoDB Atlas is the global cloud database service for modern applications.
@@ -89,7 +99,7 @@ npm -v
 
 Follow the following steps to get development environment running.
 
-* Clone _'MERN-BUS-APP.git'_ repository from GitHub
+* Clone _'MiniProject.git'_ repository from GitHub
 
   ```bash
   git clone https://github.com/Adarsh01208/MiniProject.git
