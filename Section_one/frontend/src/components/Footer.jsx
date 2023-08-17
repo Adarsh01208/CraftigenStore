@@ -9,6 +9,7 @@ const Footer = () => {
             <div className='img-fluid mb-4'>
               <img style={{ width: 200 }} src="https://thebombaystore.com/cdn/shop/files/Bombay_Store_Logo_-_Horizontal_d7759c6c-af27-4e1a-b410-8c60a11575cb.jpg?v=1617723352" alt="" />
             </div>
+            
             <div className='mb-4  ' >
               <p className='fw-bold'>Orders & Purchase Queries</p>
               <p>Phone No: +91-8657432320</p>
