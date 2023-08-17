@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import useUserContext from '../UserContext'
 
 const Navbar = () => {
+  
 
   const { loggedIn, logout } = useUserContext();
 
