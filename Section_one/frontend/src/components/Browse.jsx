@@ -20,6 +20,9 @@ const Browse = () => {
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-primary float-end">Buy Now</button>
+                        
+
+                        
                     </div>
                 </div>
             </div>))

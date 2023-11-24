@@ -10,6 +10,7 @@ const ContactUs = () => {
         name: '',
         email: '',
         message: ''
+
       },
       onSubmit: async (values, action) => {
         console.log(values);
@@ -22,6 +23,8 @@ const ContactUs = () => {
             'Content-Type': 'application/json'
           }
         });
+
+        const 
         console.log(res.status)
         action.resetForm();
 
