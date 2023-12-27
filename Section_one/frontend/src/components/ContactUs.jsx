@@ -24,7 +24,7 @@ const ContactUs = () => {
           }
         });
 
-        const 
+      
         console.log(res.status)
         action.resetForm();
 
