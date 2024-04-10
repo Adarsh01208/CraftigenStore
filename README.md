@@ -1,6 +1,4 @@
-# MERN-CRAFTIGEN-WEBSITE
-## (My First Real Project) assigned  during Internship
-
+# MERN-CRAFTIGEN-WEBSITe
 A Handicraft Web Application made using MERN Stack (MongoDB, Express js, React js, Node js)
 
 The Handicraft Website is composed of the following Features:
@@ -35,32 +33,6 @@ The Handicraft Website is composed of the following Features:
 
 ![](Previews/Home1.png)
 
-### Home Page:
-
-![](Previews/Home2.png)
-
-### LoginIn Page:
-
-![](Previews/Login.png)
-
-
-### Signup Page:
-
-![](Previews/Signup.png)
-
-### Add Product Page:
-
-![](Previews/addproducts.png)
-
-### Shopping Page:
-
-![](Previews/buyitems1.png)
-
-
-
-Browsing Items For Buying:
-![](Previews/buyitems.png)
----
 
 ## Developed With
 
