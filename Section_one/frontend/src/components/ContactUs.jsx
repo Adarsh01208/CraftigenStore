@@ -13,19 +13,13 @@ const ContactUs = () => {
 
       },
       onSubmit: async (values, action) => {
-        console.log(values);
-
-        //sending request  to backend   //required="" defaultValue={""}
-        const res = await fetch('http://localhost:5000/user/add', {
+        const res = await fetch('http://localhost:5000/contact/add', {
           method: 'POST',
           body: JSON.stringify(values),
           headers: {
             'Content-Type': 'application/json'
           }
         });
-
-      
-        console.log(res.status)
         action.resetForm();
 
         if (res.status === 200) {

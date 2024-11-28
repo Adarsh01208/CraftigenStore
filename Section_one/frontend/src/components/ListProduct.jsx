@@ -1,85 +1,96 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Slide from 'react-reveal/Slide';
-
+import { useCart } from "../contexts/CartContext";
+import Slide from "react-reveal/Slide";
 
 const ListProduct = () => {
-    const [productList, setproductList] = useState([]);
+  const [productList, setProductList] = useState([]);
+  const { category } = useParams();
+  const { addToCart, cart } = useCart();
+  const [feedbackMessage, setFeedbackMessage] = useState("");
 
-    const { category } = useParams();
+  const fetchProductList = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/product/getall");
+      const data = await res.json();
+      setProductList(
+        category ? data.filter((prod) => prod.category === category) : data
+      );
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
+  };
 
-    const fetchProductList = async () => {
-        const res = await fetch("http://localhost:5000/product/getall");
+  useEffect(() => {
+    fetchProductList();
+  }, [category]);
 
-        console.log(res.status);
+  const handleAddToCart = (product) => {
+    addToCart(product);
 
-        const data = await res.json();
-        console.log(data);
-        if (category) {
-            setproductList(data.filter((prod) => prod.category === category));
-        } else {
-            setproductList(data);
-        }
-    };
+    // Provide feedback to the user
+    setFeedbackMessage(`${product.name} added to cart!`);
+    setTimeout(() => setFeedbackMessage(""), 2000);
+  };
 
-    useEffect(() => {
-        fetchProductList();
-    }, []);
+  const displayProducts = () => {
+    if (productList.length === 0) {
+      return <h1>No Products Found</h1>;
+    }
 
-    const displayProducts = () => {
-        if (productList.length === 0) {
-            return <h1>No Products Found</h1>
-        }
-        return productList.map((product) => (
-            <div className='col-md-4 p-5   my-5 justify-content-center justify-content-evenly'>
-                <div className='card shadow-lg rounded-5'>
-                    <img
-                        className="img-fluid rounded-5"
-                        src={"http://localhost:5000/" + product.image}
-                        alt=""
-                    />
-                    <div className='card-body'>
-                        <h5>{product.name}</h5>
-                        <p>₹{product.price}</p>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn  float-end rounded-5 mx-2 px-3 " style={{ backgroundColor: 'orange' }}>Buy Now</button>
-                        <button class="btn btn-warning float-start rounded-5 mx-2 px-3">Add To Cart</button>
-
-                    </div>
-                </div>
-            </div>
-        ));
-    };
-
-
-    const filterProducts = (e) => {
-        const value = e.target.value;
-        setproductList(productList.filter((laptop) => {
-            return laptop.name.toLowerCase().includes(value.toLowerCase())
-        })
-        );
-    };
-
-    return (
-        <div className='loginbg'>
-            <header className='bg-body-tertiory'>
-                <div className='container py-5'>
-                    <Slide left>
-                        <p className='display-2 text-center mb-5 fw-bold'>Festive Favourites</p>
-                    </Slide>
-                    <Slide right>
-                        <input type="text" placeholder='Search Items' className='form-control w-75 m-auto' onChange={filterProducts} />
-                    </Slide>
-                </div>
-            </header>
-            <div className='container mt-5 '>
-                <Slide left>
-                    <div className='row mt-5 p-5'> {displayProducts()} </div>
-                </Slide>
-            </div>
+    return productList.map((product) => (
+      <div className="col-md-4 p-5 my-5 justify-content-center">
+        <div className="card shadow-lg rounded-5">
+          <img
+            className="img-fluid rounded-5"
+            src={"http://localhost:5000/" + product.image}
+            alt={product.name}
+            style={{ height: "200px", objectFit: "cover" }}
+          />
+          <div className="card-body">
+            <h5>{product.name}</h5>
+            <p>₹{product.price}</p>
+            <p>Category: {product.category}</p>
+          </div>
+          <div className="card-footer">
+            <button
+              className="btn btn-warning float-start rounded-5 mx-2 px-3"
+              onClick={() => handleAddToCart(product)}
+            >
+              Add To Cart
+            </button>
+            <span className="float-end">
+              {cart.some((item) => item._id === product._id) && (
+                <span className="text-success fw-bold">In Cart</span>
+              )}
+            </span>
+          </div>
         </div>
-    );
+      </div>
+    ));
+  };
+
+  return (
+    <div className="loginbg">
+      <header className="bg-body-tertiary">
+        <div className="container py-5">
+          <Slide left>
+            <p className="display-2 text-center mb-5 fw-bold">Festive Favourites</p>
+          </Slide>
+        </div>
+      </header>
+      <div className="container mt-5">
+        {feedbackMessage && (
+          <div className="alert alert-success text-center" role="alert">
+            {feedbackMessage}
+          </div>
+        )}
+        <Slide left>
+          <div className="row mt-5 p-5">{displayProducts()}</div>
+        </Slide>
+      </div>
+    </div>
+  );
 };
 
 export default ListProduct;

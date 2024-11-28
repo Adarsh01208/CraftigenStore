@@ -20,6 +20,8 @@ import { useNavigate } from "react-router-dom";
      const logout =() =>
     {
         sessionStorage.removeItem('user');
+        localStorage.removeItem('cart');
+        
         setCurrentUser(null);
         setLoggedIn(false);
         navigate('/login')

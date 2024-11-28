@@ -1,11 +1,11 @@
-const laptopData = [
+const ItemsData = [
     {
         id: 84473,
         title: 'King Procession Rectangle',
         price: 795,
         reviews: 270,
         rating: 4.1,
-        image: 'https://cdn.shopify.com/s/files/1/0555/6256/7874/products/1_26aae6eb-1173-46f6-923d-a5dfe57ea666_540x.jpg?v=1651574181'
+        image: 'https://thebombaystore.com/cdn/shop/files/01_0f2aa6a7-6318-4f68-a876-9c9001443c8f_300x.jpg?v=1726647179'
     },
     {
         id: 84444,
@@ -13,7 +13,7 @@ const laptopData = [
         price: 595,
         reviews: 450,
         rating: 4.6,
-        image: 'https://cdn.shopify.com/s/files/1/0555/6256/7874/products/2_2fafcb0e-42ac-410d-8a4e-7a19e582ce02_540x.jpg?v=1679116444'
+        image: 'https://th.bing.com/th/id/OIP.9JFLd_-h2b2uqw0NRh4PXwHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     },
     {
         id: 82473,
@@ -45,7 +45,7 @@ const laptopData = [
         price: 1700,
         reviews: 130,
         rating: 4.2,
-        image: 'https://cdn.shopify.com/s/files/1/0555/6256/7874/products/1_2da6771d-9613-49de-8b30-02d61027be6d_540x.jpg?v=1629543030'
+        image: 'https://th.bing.com/th/id/OIP.xHn1JNX8b0oyEHxt-ElUbQHaHa?w=193&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     },
     {
         id: 31578,
@@ -94,7 +94,7 @@ const laptopData = [
         price: 1100,
         reviews: 420,
         rating: 4.3,
-        image: ' https://cdn.shopify.com/s/files/1/0555/6256/7874/products/1_34c68fc3-623a-439f-a6b0-abd0c6fb2b37_540x.jpg?v=1649941378'
+        image: 'https://www.bing.com/th?id=OIP.PUEh17zjDTp1lBdsrrOn4gHaHa&w=176&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'
     },
     {
         id: 20778,
@@ -125,4 +125,4 @@ const laptopData = [
 ];
 
 
-export default laptopData;
+export default ItemsData;

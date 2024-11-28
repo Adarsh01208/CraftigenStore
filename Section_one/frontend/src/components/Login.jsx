@@ -76,16 +76,16 @@ const Login = () => {
       <div className="d-flex justify-content-center align-items-center  vh-100 ">
         <div className="card w-25 shadow-lg rounded-5   ">
           <div className="card-body  p-5 ">
-            <i className="fa-solid fa-lock fa-3x d-block text-center " />
-            <h1 className="text-center my-4  ">Login Form</h1>
+            <i className="fa-solid fa-lock fa-2x d-block text-center " />
+            <h4 className="text-center my-4  ">Login Form</h4>
             <form onSubmit={loginForm.handleSubmit} >
-              <label htmlFor="">Email</label>
+              
               <p className='error-label '>{loginForm.touched.email ? loginForm.errors.email : ''}</p>
-              <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
+              <input className="form-control mb-4 rounded-3" placeholder='Email' type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
 
-              <label htmlFor="">Password</label>
+          
               <p className='error-label ' >{loginForm.touched.password ? loginForm.errors.password : ''}</p>
-              <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
+              <input className="form-control mb-4 rounded-3" placeholder='Password' type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
 
               <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Login</button>
             </form>
