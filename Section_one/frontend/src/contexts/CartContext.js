@@ -32,12 +32,23 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (id, action) => {
-    setCart(cart.map(item =>
-      item._id === id
-        ? { ...item, quantity: action === "increase" ? item.quantity + 1 : item.quantity - 1 }
-        : item
-    ));
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item._id === id
+          ? {
+              ...item,
+              quantity:
+                action === 'increase'
+                  ? item.quantity + 1
+                  : item.quantity > 1
+                  ? item.quantity - 1
+                  : item.quantity,
+            }
+          : item
+      )
+    );
   };
+
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity }}>

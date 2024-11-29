@@ -45,20 +45,20 @@ const ContactUs = () => {
       <div className="d-flex justify-content-center align-items-center  vh-100 ">
         <div className="card w-25 shadow-lg rounded-5   ">
           <div className="card-body p-5">
-            <i className="fa-solid fa-lock fa-3x d-block text-center " />
-            <h1 className="text-center my-4  ">Contact Form</h1>
+            <i className="fa-solid fa-lock fa-2x d-block text-center " />
+            <h4 className="text-center my-2  ">Contact Form</h4>
             <form onSubmit={contactForm.handleSubmit}>
               <div>
                 <label htmlFor="">Name</label>
-                <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={contactForm.handleChange} value={contactForm.values.name} />
+                <input className="form-control mb-2 rounded-3" type="text" name="name" onChange={contactForm.handleChange} value={contactForm.values.name} />
               </div>
               <div>
                 <label htmlFor="">Email</label>
-                <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={contactForm.handleChange} value={contactForm.values.email} />
+                <input className="form-control mb-2 rounded-3" type="email" name="email" onChange={contactForm.handleChange} value={contactForm.values.email} />
               </div>
               <div>
                 <label htmlFor="">Message</label>
-                <textarea className="form-control mb-4 rounded-3" rows={3} cols={30} type="String" name="message" onChange={contactForm.handleChange} value={contactForm.values.message} />
+                <textarea className="form-control mb-2 rounded-3" rows={3} cols={30} type="String" name="message" onChange={contactForm.handleChange} value={contactForm.values.message} />
               </div>
 
               <div>

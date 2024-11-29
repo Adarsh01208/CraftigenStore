@@ -73,8 +73,7 @@ const AddProduct = () => {
                 <div className="d-flex justify-content-center align-items-center  vh-100  mt-3 ">
                     <div className="card w-25 mt-5 shadow-lg rounded-5  ">
                         <div className="card-body ">
-                            <i className="fa-solid fa-lock fa-3x d-block text-center mt-3 " />
-                            <h1 className="text-center my-2 text-dark">Add Items</h1>
+                            <h4 className="text-center my-2 text-dark">Add Items</h4>
                             <form onSubmit={addProductForm.handleSubmit}>
                                 <div className='m-0'>
                                     <label htmlFor="">Items Name</label>
